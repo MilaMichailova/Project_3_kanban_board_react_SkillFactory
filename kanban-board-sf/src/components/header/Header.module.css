@@ -1,0 +1,75 @@
+.dropMenuButton:hover {
+  cursor: pointer;
+  background-color: #80c2e5;
+}
+.userProfile :hover {
+  cursor: pointer;
+}
+
+.header {
+  background: #0067a3;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 33px;
+  color: #ffffff;
+}
+
+.userProfile {
+  margin-left: auto;
+}
+
+.avatar {
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.dropMenu {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  width: 134px;
+  position: absolute;
+  width: 134px;
+  height: auto;
+  right: 10px;
+  top: 61px;
+  background: #ffffff;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  border: none;
+  color: #000000;
+}
+.dropMenuButton {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  border: none;
+  color: #000000;
+  background-color: #fff;
+  text-align: left;
+}
+
+.dropArrow {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  right: 45.78px;
+  top: 57px;
+  background: #ffffff;
+  transform: rotate(45deg);
+}

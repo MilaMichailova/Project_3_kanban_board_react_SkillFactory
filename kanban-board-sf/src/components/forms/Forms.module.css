@@ -1,0 +1,46 @@
+.form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  background: #ebecf0;
+  border-radius: 10px;
+}
+
+.input:focus {
+  text-decoration: underline;
+}
+
+.input {
+  display: block;
+  border: 1px solid #465671;
+  border-radius: 8px;
+  margin-bottom: 7px;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.textarea {
+  resize: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  overflow: hidden;
+}
+
+.submit {
+  background: #0079bf;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  cursor: pointer;
+  align-self: flex-start;
+  width: 102px;
+}
+
+.submit:hover {
+  background: #5d7194;
+}

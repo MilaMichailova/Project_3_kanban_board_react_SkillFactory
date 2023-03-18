@@ -1,0 +1,42 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 19px;
+  height: 55px;
+  background: #0067a3;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.counts {
+  display: flex;
+  flex-direction: row;
+}
+
+.count {
+  display: flex;
+  flex-direction: row;
+
+  margin-right: 30px;
+}
+
+.count + .count::before {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: -15px;
+  top: 0;
+}
+
+.copy {
+  margin-left: auto;
+}
