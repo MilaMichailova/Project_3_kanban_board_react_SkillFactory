@@ -1,11 +1,35 @@
 .list {
-  width: 350px;
+  width: 282px;
+  min-width: 282px;
   height: fit-content;
+  max-height: 538px;
+  scroll-behavior: smooth;
   background: #ebecf0;
-  padding: 20px;
+  padding: 12px 0 15px 12px;
   border-radius: 18px;
   box-sizing: border-box;
-  margin: 15px;
+  overflow-y: hidden;
+}
+
+.listWrapper {
+  overflow-y: auto;
+  max-height: 500px;
+  padding: 10px;
+}
+
+.listWrapper::-webkit-scrollbar {
+  width: 12px;
+}
+
+.listWrapper::-webkit-scrollbar-track {
+  background: #fff;
+  scrollbar-gutter: stable both-edges;
+  border-radius: 5px;
+}
+
+.listWrapper::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #cbcbcb;
 }
 
 .listTitle {
@@ -48,8 +72,16 @@
   cursor: pointer;
 }
 
+.addButton:disabled {
+  color: #a57676;
+  cursor: none;
+}
 .addButton:hover {
   color: #000;
+}
+
+.addButton:hover:disabled {
+  color: #a57676;
 }
 
 .selectTask {
@@ -64,7 +96,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  width: 258px;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -72,4 +104,23 @@
   background: #ffffff;
   border-radius: 5px;
   overflow: hidden;
+}
+
+@media (max-width: 338px) {
+  .list {
+    margin-bottom: 50px;
+    height: 100%;
+    min-height: 248px;
+    max-height: 249px;
+    overflow: scroll;
+  }
+
+  .listWrapper {
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .selectTask {
+    width: 234px;
+  }
 }

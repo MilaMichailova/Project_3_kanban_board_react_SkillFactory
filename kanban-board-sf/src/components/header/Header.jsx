@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <header className={css.header}>
-      <h1 className={css.title}>Awesome Kanban Board</h1>
+      <div className={`${css.title} ${css.desctop}`}>Awesome Kanban Board</div>
       <div
         className={css.userProfile}
         onClick={() => updateMenuState(!isMenuOpened)}

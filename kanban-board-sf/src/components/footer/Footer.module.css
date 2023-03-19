@@ -40,3 +40,13 @@
 .copy {
   margin-left: auto;
 }
+
+@media (max-width: 338px) {
+  .wrapper {
+    width: 338px;
+  }
+
+  .footer {
+    display: none;
+  }
+}

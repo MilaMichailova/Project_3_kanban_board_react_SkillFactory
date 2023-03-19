@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Main from "./components/main/Main";
+import css from "./App.css";
 import data from "./mock.json";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="wrapper">
+      <div className={css.wrapper + " " + css.mobileWrapper}>
         <Header />
         <Main tasks={tasks} setTasks={setTasks} />
         <Footer tasks={tasks} />

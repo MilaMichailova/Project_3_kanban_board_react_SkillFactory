@@ -40,48 +40,61 @@ const List = (props) => {
   return (
     <div className={css.list}>
       <h2 className={css.listTitle}>{title}</h2>
-      {getCurrentListTasks(type).map((task) => {
-        return (
-          <Link
-            key={`${task.id}-link`}
-            to={`/tasks/${task.id}`}
-            className={css.taskLink}
-          >
-            <div key={task.id} className={css.task}>
-              {task.title}
-            </div>
-          </Link>
-        );
-      })}
-      {!isFormVisible && (
-        <button className={css.addButton} onClick={handleClick}>
-          + Add card
-        </button>
-      )}
-      {type === LIST_TYPES.BACKLOG && isFormVisible && (
-        <FormAddNewTask
-          addNewTask={addNewTask}
-          setFormVisible={setFormVisible}
-        />
-      )}
-      {type !== LIST_TYPES.BACKLOG && isFormVisible && (
-        <select onChange={onTaskSelected} className={css.selectTask}>
-          <option
-            key={uniqid()}
-            value="optionsState"
-            className={css.optionTask}
-          >
-            please select a task here
-          </option>
-          {getPreviousStateTasks(type).map((task) => {
-            return (
-              <option key={task.id} value={task.id}>
+      <div className={css.listWrapper}>
+        {getCurrentListTasks(type).map((task) => {
+          return (
+            <Link
+              key={`${task.id}-link`}
+              to={`/tasks/${task.id}`}
+              className={css.taskLink}
+            >
+              <div key={task.id} className={css.task}>
                 {task.title}
-              </option>
-            );
-          })}
-        </select>
-      )}
+              </div>
+            </Link>
+          );
+        })}
+        {type === LIST_TYPES.BACKLOG && !isFormVisible && (
+          <button className={css.addButton} onClick={handleClick}>
+            + Add card
+          </button>
+        )}
+
+        {type !== LIST_TYPES.BACKLOG && !isFormVisible && (
+          <button
+            disabled={!getPreviousStateTasks(type).length}
+            className={css.addButton}
+            onClick={handleClick}
+          >
+            + Add card
+          </button>
+        )}
+
+        {type === LIST_TYPES.BACKLOG && isFormVisible && (
+          <FormAddNewTask
+            addNewTask={addNewTask}
+            setFormVisible={setFormVisible}
+          />
+        )}
+        {type !== LIST_TYPES.BACKLOG && isFormVisible && (
+          <select onChange={onTaskSelected} className={css.selectTask}>
+            <option
+              key={uniqid()}
+              value="optionsState"
+              className={css.optionTask}
+            >
+              please select a task here
+            </option>
+            {getPreviousStateTasks(type).map((task) => {
+              return (
+                <option key={task.id} value={task.id}>
+                  {task.title}
+                </option>
+              );
+            })}
+          </select>
+        )}
+      </div>
     </div>
   );
 };

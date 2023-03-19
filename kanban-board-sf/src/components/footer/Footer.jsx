@@ -20,7 +20,7 @@ const Footer = (props) => {
           </div>
         </div>
       </div>
-      <div className="css.copy">Kanban board by Mikhailova L.V, 2023</div>
+      <div className="css.copy">Kanban board by Name, Year</div>
     </footer>
   );
 };

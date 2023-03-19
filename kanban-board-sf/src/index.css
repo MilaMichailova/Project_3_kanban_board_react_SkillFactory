@@ -5,10 +5,17 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 1235px;
   box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@media (max-width: 338px) {
+  body {
+    width: 338px;
+  }
 }

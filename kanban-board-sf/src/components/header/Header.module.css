@@ -1,6 +1,6 @@
 .dropMenuButton:hover {
   cursor: pointer;
-  background-color: #80c2e5;
+  background-color: #d8dfe2;
 }
 .userProfile :hover {
   cursor: pointer;
@@ -10,8 +10,10 @@
   background: #0067a3;
   color: #fff;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  padding: 0 20px;
+  justify-content: space-between;
+  padding: 11px 20px 11px 20px;
 }
 
 .title {
@@ -19,17 +21,18 @@
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
-  line-height: 33px;
+  line-height: 28px;
   color: #ffffff;
 }
 
 .userProfile {
-  margin-left: auto;
+  padding-right: 22px;
 }
 
 .avatar {
   background-color: #fff;
   border-radius: 50%;
+  margin-right: 6px;
 }
 
 .dropMenu {
@@ -40,8 +43,8 @@
   position: absolute;
   width: 134px;
   height: auto;
-  right: 10px;
-  top: 61px;
+  right: 381px;
+  top: 57px;
   background: #ffffff;
   border-radius: 5px;
   font-family: "Roboto";
@@ -68,8 +71,22 @@
   position: absolute;
   width: 11px;
   height: 11px;
-  right: 45.78px;
-  top: 57px;
+  right: 412px;
+  top: 52px;
   background: #ffffff;
   transform: rotate(45deg);
+}
+
+@media (max-width: 338px) {
+  .desctop {
+    display: none;
+  }
+
+  .header {
+    justify-content: end;
+  }
+
+  .userProfile {
+    padding-right: 0px;
+  }
 }

@@ -5,7 +5,6 @@ import uniqid from "uniqid";
 
 const Board = (props) => {
   const { tasks, setTasks } = props;
-  console.log("board", props);
 
   const addNewTask = (title, description) => {
     const newTask = {

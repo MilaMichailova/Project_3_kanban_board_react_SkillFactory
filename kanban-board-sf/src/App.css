@@ -1,5 +1,13 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
   height: 100%;
+}
+
+@media (max-width: 338px) {
+  .wrapper {
+    width: 338px;
+  }
 }

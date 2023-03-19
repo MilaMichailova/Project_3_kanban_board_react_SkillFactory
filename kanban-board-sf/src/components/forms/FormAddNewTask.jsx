@@ -31,7 +31,7 @@ const FormAddNewTask = (props) => {
         id="taskTitle"
         name="title"
         type="text"
-        placeholder="Enter task title"
+        placeholder="Enter task title *"
         value={values.title}
         onChange={hanleChange}
       />
